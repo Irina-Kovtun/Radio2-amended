@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-    Radio radio = new Radio(20);
+    Radio radio = new Radio(0,20, 0, 0, 100, 0);
 
     @Test
     void shouldSetStationWithinRange() {
