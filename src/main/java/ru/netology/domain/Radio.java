@@ -1,7 +1,14 @@
 package ru.netology.domain;
 
-public class Radio {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
+public class Radio {
     private int currentStation;
     private int maxStation = 9;
     private int minStation = 0;
@@ -9,18 +16,12 @@ public class Radio {
     private int maxVolume = 10;
     private int minVolume = 0;
 
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {
             return;
         }
         if (currentStation < minStation) {
             return;
-//            int firstDigit = Integer.parseInt(Integer.toString(currentStation).substring(0, 1));
-//            currentStation = firstDigit;
         }
         this.currentStation = currentStation;
     }
@@ -39,10 +40,6 @@ public class Radio {
         } else {
             currentStation--;
         }
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
     }
 
     public void setCurrentVolume(int currentVolume) {
